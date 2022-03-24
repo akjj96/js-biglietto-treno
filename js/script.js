@@ -15,17 +15,25 @@ if (isNaN(userAge)){
 let prezzoDelViaggio = (percorrenzaKm*0.21);
 console.log(prezzoDelViaggio);
 
-let dcVecchio = (ticketPrice / 100 * 40);
-let dcGiovane = (ticketPrice / 100 * 20);
+let dcVecchio = (prezzoDelViaggio / 100 * 40);
+let dcGiovane = (prezzoDelViaggio / 100 * 20);
 
 if (userAge >= 65){
-console.log(prezzoDelViaggio - dcVecchio);
+    document.getElementById('treno').innerHTML =''+ (prezzoDelViaggio - dcGiovane);
+    console.log(prezzoDelViaggio - dcVecchio);
+    
+    
 
 }else if (userAge < 65 || userAge > 18){
+    document.getElementById('treno').innerHTML =''+ prezzoDelViaggio;
     console.log(percorrenzaKm * 0.21);
     
+    
+    
 }if (userAge < 18){
+    document.getElementById('treno').innerHTML = ''+ (prezzoDelViaggio - dcVecchio);
     console.log(prezzoDelViaggio - dcGiovane);
+    
 } 
 
-document.getElementById('treno').innerHTML = ((prezzoDelViaggio - dcGiovane,prezzoDelViaggio - dcVecchio,prezzoDelViaggio ));
+document.getElementById('treno').innerHTML
